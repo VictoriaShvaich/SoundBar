@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundBar</title>
+  <link rel="shortcut icon" href="./resource/logoMain.png" />
+  <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/modalProd.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Pangolin&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="navigationBarModal">
+    <div class="navHead">
+      <div class="btnClose"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    <nav>
+      <a href="./main.html" class="activeLink">Главная</a>
+      <a href="./cataloge.html">Каталог</a>
+      <a href="./about.html">О нас</a>
+      <a href="./contact.html">Контакты</a>
+      <a href="./reviews.html">Отзывы</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="wrapper">
+      <header>
+        <a href="./main.html">
+          <div class="logo">
+            <img src="./resource/logoMain.png" alt="buzzhut">
+            <p>SoundBar</p>
+          </div>
+        </a>
+
+        <nav>
+          <ul>
+            <li><a href="./cataloge.html">Каталог</a></li>
+            <li><a href="./about.html">О нас</a></li>
+            <li><a href="./contact.html">Контакты</a></li>
+            <li><a href="./reviews.html">Отзывы</a></li>
+          </ul>
+        </nav>
+
+        <div class="cart">
+          <button id="cart"><i class="fa-solid fa-basket-shopping"></i></button>
+        </div>
+
+        <div class="navBar">
+          <button class="nav-button"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+      </header>
+    </div>
+  </div>
+
+  <div class="containerGreeting">
+    <div class="wrapper">
+      <div class="greeting">
+        <div class="text">
+          <h1>Добро пожаловать в <br> SoundBar!</h1>
+          <p class="pText">Здесь вы найдёте идеальное звучание для музыки, работы, спорта и отдыха. Мы собрали лучшие
+            модели мировых брендов, чтобы вы могли наслаждаться чистотой аудио каждый день.</p>
+          <button>
+            Узнать больше
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popularProd">
+    <div class="head">
+      <h2>
+        Популярные товары
+      </h2>
+    </div>
+
+    <div class="wrapper">
+      <p>Для тех, кто пока не знает что хочет</p>
+
+      <div class="topProd">
+        <img src="https://i.pinimg.com/736x/c3/46/a0/c346a0fc3dac610e9743316f0b2c3a50.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/8a/8a/af/8a8aaf632aec23a4fb511e914b5723b9.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/f3/17/94/f31794f2a6bc4a7305528502bfcb9a9c.jpg" alt="">
+      </div>
+
+
+      <div class="btn">
+        <button><a href="./cataloge.html">Посмотреть все</a></button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="goodProperties">
+    <div class="wrapper">
+    <div class="head">
+      <h2>
+        Почему именно мы
+      </h2>
+    </div>
+
+      <div class="properties">
+        <div class="itemProp">
+          <h4>Широкий ассортимент</h4>
+          <p>Мы предлагаем сотни моделей — от бюджетных до профессиональных.</p>
+        </div>
+        <div class="itemProp">
+          <h4>Гарантия качества</h4>
+          <p>Работаем только с проверенными брендами, предоставляем официальную гарантию.</p>
+        </div>
+        <div class="itemProp">
+          <h4>Быстрая доставка</h4>
+          <p>Отправляем в день заказа. Доставляем по всей стране.</p>
+        </div>
+        <div class="itemProp">
+          <h4>Поддержка экспертов</h4>
+          <p>Поможем выбрать наушники под ваши задачи — музыка, спорт, игры или работа.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subs">
+    <div class="head">
+      <h2>
+        Оставайтесь в курсе событий
+      </h2>
+    </div>
+
+    <div class="wrapper">
+      <p class="addText">Чтобы быть в курсе новых акций и предложений</p>
+
+<div class="form">
+  <input type="text" placeholder="Введите почту..." id="emailInput">
+  <button id="subscribeBtn">Подписаться</button>
+</div>
+<p id="message" style="color: red; margin-top: 5px;"></p>
+
+
+    </div>
+  </div>
+  </div>
+
+  <div class="containerFooter">
+    <div class="wrapper">
+      <footer>
+        <div class="logo">
+          <img src="./resource/logoMain.png" alt="buzzhut">
+          <p>SoundBar</p>
+        </div>
+
+        <p>(c) Все права защищены </p>
+
+        <div class="social">
+          <div class="socialButton">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="socialButton">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="socialButton">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+    <div class="modalPerf">
+    <div class="mainBox">
+      <div class="prefHead">
+        <div><h3>Корзина</h3></div>
+        <div class="btnClose"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+      <div class="boxPref">
+      </div>
+    </div>
+    <button class="order">Заказать</button>
+  </div>
+  <div class="modal-overlay"></div>
+  <script type="module" src="./js/cart.js"></script>
+  <script src="./js/navBar.js"></script>
+  <script src="./js/emailForm.js"></script>
+</body>
+
+</html>
