@@ -1,0 +1,266 @@
+@use "reset";
+@use "veriables";
+@use "header";
+@use "general";
+@use "footer";
+@use "navBarModal";
+
+.reviewsGreeting {
+  position: relative;
+  height: 511px;
+  margin-bottom: 75px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../resource/font2.jpg);
+    background-size: cover;
+    filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+
+    .blockReview {
+      padding-top: 38px;
+
+      h2 {
+        margin-bottom: 38px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+
+    .sliderReviews {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      img {
+        width: 75px;
+        height: 88px;
+        cursor: pointer;
+      }
+
+      .boxReviews {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 53px;
+        width: 1003px;
+        height: 281px;
+
+        background: #fff;
+        border: 3px solid #fff;
+        border-radius: 10px;
+
+        img {
+          width: 175px;
+          height: 175px;
+          border-radius: 50%;
+        }
+
+        .userInfo {
+          .headInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+
+            h3 {
+              font-size: 24px;
+              font-weight: 700;
+              color: #1a1a1a;
+            }
+
+            p {
+              font-size: 18px;
+              font-style: italic;
+              color: #a79e9e;
+            }
+          }
+
+          p {
+            font-size: 18px;
+            color: #444;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reviewsForm {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  .wrapper {
+    h3 {
+      margin-bottom: 26px;
+      font-size: 30px;
+      font-weight: 900;
+      color: #1a1a1a;
+      text-transform: uppercase;
+    }
+
+    .blockForm {
+      display: flex;
+      gap: 68px;
+      padding: 36px 62px;
+
+      width: 1007px;
+      height: 400px;
+
+      background: #19ac74;
+      border: 3px solid #19ac74;
+      border-radius: 15px;
+      margin-bottom: 61px;
+
+      .textForm {
+        h4 {
+          margin-bottom: 33px;
+          font-size: 24px;
+          font-weight: 700;
+          color: #f0f0f0;
+          text-align: justify;
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 700;
+          color: #e3e3e3;
+          text-align: justify;
+        }
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+
+        .inputForm {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 27px;
+
+          input,
+          textarea {
+            background: inherit;
+            color: #fff;
+          }
+
+          input {
+            width: 250px;
+            height: 50px;
+            padding: 10px;
+            border: none;
+            border-bottom: 3px solid #fff;
+          }
+
+          textarea {
+            width: 527px;
+            height: 122px;
+            padding: 10px;
+            border: 3px solid #fff;
+            border-radius: 15px;
+            margin-bottom: 46px;
+          }
+
+          input::placeholder,
+          textarea::placeholder {
+            font-size: 18px;
+            color: #fff;
+            text-align: justify;
+          }
+        }
+
+        .btn {
+          display: flex;
+          justify-content: flex-end;
+
+          button {
+            width: 212px;
+            height: 45px;
+            padding: 12px 30px;
+
+            background: inherit;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+
+            &:hover {
+              background: #fff;
+              color: #000;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .reviewsGreeting {
+    .wrapper {
+      .sliderReviews {
+        .slidArroy {
+          display: none;
+        }
+
+        .boxReviews {
+          height: 300px;
+
+          img {
+            width: 124px;
+            height: 124px;
+          }
+        }
+      }
+    }
+  }
+
+  .reviewsForm {
+    .wrapper {
+      .blockForm {
+        flex-direction: column;
+        gap: 30px;
+        width: 659px;
+        height: 514px;
+        padding: 36px 42px;
+
+        .form {
+          width: 100%;
+
+          .inputForm {
+            flex-direction: row;
+            gap: 27px;
+
+            input {
+              width: 270px;
+            }
+
+            textarea {
+              width: 567px;
+            }
+
+            .disableInput {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

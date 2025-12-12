@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigationBarModal {
+  display: none;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  padding: 45px 65px;
+  z-index: 15;
+}
+.navigationBarModal .navHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.navigationBarModal .navHead i {
+  cursor: pointer;
+  font-size: 40px;
+}
+.navigationBarModal nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.navigationBarModal nav a {
+  font-size: 30px;
+  color: #1a1a1a;
+  text-decoration: none;
+  text-underline-offset: 5px;
+}
+.navigationBarModal nav .activeLink {
+  text-decoration: underline;
+}

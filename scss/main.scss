@@ -1,0 +1,279 @@
+@use "reset";
+@use "veriables";
+@use "header";
+@use "general";
+@use "footer";
+@use "navBarModal";
+
+
+.containerGreeting {
+  background-image: url(../resource/font4.jpg);
+  background-size: cover;
+  padding: 60px 0;
+
+  .wrapper {
+    .greeting {
+      max-width: 1440px;
+      height: 511px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .text {
+        width: 50%;
+        text-align: end;
+
+        h1 {
+          font-size: 40px;
+          font-weight: 400;
+          color: #fff;
+          font-family: veriables.$head-font;
+        }
+
+        .pText {
+          margin-top: 30px;
+          font-size: 24px;
+          color: #fff;
+          font-family: veriables.$head-font;
+        }
+
+      button {
+      width: 314px;
+      height: 61px;
+      padding: 12px 30px;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 10px;
+      background: #ffcc16;
+      border: 3px solid #ffcc16;
+      cursor: pointer;
+      color: #fff;
+      &:hover {
+        background: #fff;
+        border-color: #1a1a1a;
+        color: #1a1a1a;
+        }
+      }
+    }
+  }
+}}
+
+
+.popularProd {
+  .head {
+    margin-bottom: 15px;
+    background: #19ac74;
+    height: 66px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      font-family: veriables.$head-font;
+    }
+  }
+}
+
+.wrapper {
+  p {
+    font-style: italic;
+    font-size: 24px;
+    color: #84705e;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  .topProd {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 85px;
+
+    img {
+      width: 373px;
+      height: 342px;
+      border: 1px solid #4f3013;
+      box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    }
+  }
+
+  .btn {
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 314px;
+      height: 61px;
+      padding: 12px 30px;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 10px;
+      background: #ffcc16;
+      border: 3px solid #ffcc16;
+      cursor: pointer;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background: #fff;
+        border-color: #1a1a1a;
+
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.goodProperties {
+  margin-bottom: 150px;
+  background: #19ac74;
+
+  .wrapper {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 100px;
+
+    .head h2 {
+      width: 200px;
+      font-size: 40px;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      font-family: veriables.$head-font;
+    }
+  }
+
+  .properties {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0 50px;
+
+    .itemProp {
+      width: 400px;
+      height: 300px;
+      padding: 25px 40px;
+      border-radius: 30px;
+      border: 3px solid #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+
+      h4 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+      }
+
+      p {
+        color: #fff;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.subs {
+  margin-bottom: 100px;
+
+  .head {
+    margin-bottom: 15px;
+    background: #1a1a1a;
+    height: 66px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+
+    h2 {
+      font-size: 40px;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      font-family: veriables.$head-font;
+    }
+  }
+
+  .wrapper {
+    .addText {
+      @extend p;
+    }
+
+    .form {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+
+      input {
+        width: 380px;
+        height: 60px;
+        padding-left: 10px;
+        border: 3px solid #1a1a1a;
+        border-radius: 10px;
+        font-size: 24px;
+
+        &::placeholder {
+          font-size: 24px;
+          color: #363636;
+        }
+      }
+    }
+
+    button {
+      width: 314px;
+      height: 61px;
+      padding: 12px 30px;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 10px;
+      background: #ffcc16;
+      border: 3px solid #ffcc16;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background: #fff;
+        border-color: #1a1a1a;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .containerGreeting {
+    margin-bottom: 60px;
+
+    .wrapper{
+      .greeting {
+      .text {
+        width: 100%;
+      }
+    }}
+  }
+
+  .topProd {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .goodProperties .wrapper {
+    flex-direction: column;
+
+    .properties {
+      flex-direction: column;
+    }
+  }
+
+  .form {
+    flex-direction: column !important;
+    align-items: center;
+  }
+}

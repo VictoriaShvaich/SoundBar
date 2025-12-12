@@ -1,0 +1,155 @@
+@use "reset";
+@use "veriables";
+@use "header";
+@use "general";
+@use "footer";
+@use "navBarModal";
+@use "modalProd";
+
+main {
+  display: flex;
+  gap: 100px;
+
+
+  aside {
+    .search {
+      width: 273px;
+      height: 48px;
+      padding: 15px 10px 10px;
+      margin: 45px 0;
+      border: 3px solid #1a1a1a;
+      border-radius: 10px;
+      background: #fff;
+
+      &::placeholder {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+    }
+
+    .blockKind,
+    .blockContry {
+      margin-bottom: 30px;
+
+      h2 {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+
+      .check {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 5px;
+          font-size: 18px;
+          color: #1a1a1a;
+        }
+      }
+    }
+  }
+
+
+  article {
+    .filter {
+      margin: 45px 0;
+      display: flex;
+
+      .sort-select {
+        width: 273px;
+        height: 48px;
+        padding: 5px 10px;
+        border: 3px solid #1a1a1a;
+        border-radius: 10px;
+        background: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+    }
+
+    .catalogeProd {
+      margin: 45px 0 65px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 55px;
+
+      .boxProd {
+        img {
+          width: 224px;
+          height: 224px;
+          margin-bottom: 5px;
+          border: 1px solid #000;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        p {
+          margin-bottom: 15px;
+          font-size: 18px;
+          font-weight: 700;
+          color: #000;
+          text-align: justify;
+        }
+
+        .priceBox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #008161;
+          }
+
+          button {
+            width: 115px;
+            height: 35px;
+            padding: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 10px;
+            border: 3px solid #ffcc16;
+            background: #ffcc16;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+              background: #fff;
+              border-color: #1a1a1a;
+              color: #1a1a1a;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  main {
+    aside {
+      display: none;
+    }
+
+    article {
+      .filter {
+        .sort-select {
+          width: 233px;
+        }
+      }
+
+      .catalogeProd {
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "reset";
+@use "veriables";
+
+.navigationBarModal {
+  display: none;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  padding: 45px 65px;
+  z-index: 15;
+  .navHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    i {
+      cursor: pointer;
+      font-size: 40px;
+    }
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    a {
+      font-size: 30px;
+      color: #1a1a1a;
+      text-decoration: none;
+      text-underline-offset: 5px;
+    }
+
+    .activeLink {
+      text-decoration: underline;
+    }
+  }
+}

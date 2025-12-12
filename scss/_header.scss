@@ -1,0 +1,122 @@
+@use "veriables";
+@use "reset";
+
+.container {
+  background-color: #1a1a1a;
+  .wrapper {
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px 0;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+      }
+      .logo {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+          font-weight: 200;
+          font-size: 40px;
+          color: #c2c2c2;
+          font-family: veriables.$head-font;
+          text-transform: initial;
+        }
+        img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 46px;
+        list-style-type: none;
+        li {
+          .activeLink {
+            border-bottom: 1px solid #c2c2c2;
+            padding-bottom: 3px;
+          }
+          a {
+            font-weight: 400;
+            font-size: 24px;
+            color: #c2c2c2;
+            text-decoration: none;
+            font-family: veriables.$head-font;
+          }
+        }
+        li:hover {
+          .activeLink {
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 3px;
+          }
+          a {
+            color: #ffffff;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+
+    .navBar {
+      display: none;
+      .nav-button{
+        background-color: #1a1a1a;
+        i{
+          color: white;
+        }
+      }
+    }
+
+    .cart {
+    button{ 
+      background-color: inherit;
+      border: none;
+      width: 30px;
+      i {
+        text-align: end;
+      color: #c2c2c2;
+      font-size: 34px;
+    }}
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .wrapper {
+      header {
+        .navBar {
+          display: block;
+          button {
+            border: none;
+            width: 52px;
+            i {
+              font-size: 34px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        nav {
+          display: none;
+        }
+
+        .cart {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

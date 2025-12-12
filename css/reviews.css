@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #1a1a1a;
+}
+.container .wrapper header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 0;
+  align-items: center;
+}
+.container .wrapper header a {
+  text-decoration: none;
+}
+.container .wrapper header .logo {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+.container .wrapper header .logo p {
+  margin-bottom: 0;
+  font-weight: 200;
+  font-size: 40px;
+  color: #c2c2c2;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: initial;
+}
+.container .wrapper header .logo img {
+  width: 70px;
+  height: 70px;
+}
+.container .wrapper nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 46px;
+  list-style-type: none;
+}
+.container .wrapper nav ul li .activeLink {
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 3px;
+}
+.container .wrapper nav ul li a {
+  font-weight: 400;
+  font-size: 24px;
+  color: #c2c2c2;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container .wrapper nav ul li:hover .activeLink {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 3px;
+}
+.container .wrapper nav ul li:hover a {
+  color: #ffffff;
+  transition: 0.5s;
+}
+.container .wrapper .navBar {
+  display: none;
+}
+.container .wrapper .navBar .nav-button {
+  background-color: #1a1a1a;
+}
+.container .wrapper .navBar .nav-button i {
+  color: white;
+}
+.container .wrapper .cart button {
+  background-color: inherit;
+  border: none;
+  width: 30px;
+}
+.container .wrapper .cart button i {
+  text-align: end;
+  color: #c2c2c2;
+  font-size: 34px;
+}
+
+@media (max-width: 768px) {
+  .container .wrapper header .navBar {
+    display: block;
+  }
+  .container .wrapper header .navBar button {
+    border: none;
+    width: 52px;
+  }
+  .container .wrapper header .navBar button i {
+    font-size: 34px;
+    cursor: pointer;
+  }
+  .container .wrapper header nav {
+    display: none;
+  }
+  .container .wrapper header .cart img {
+    display: none;
+  }
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 140px;
+  margin: auto;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+button {
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 0 65px;
+    margin: auto;
+  }
+}
+.containerFooter {
+  background: #1a1a1a;
+}
+.containerFooter .wrapper footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 0;
+  align-items: center;
+}
+.containerFooter .wrapper footer .logo {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+.containerFooter .wrapper footer .logo p {
+  margin-bottom: 0;
+  font-weight: 200;
+  font-size: 40px;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.containerFooter .wrapper footer .logo img {
+  width: 70px;
+  height: 70px;
+}
+.containerFooter .wrapper footer p {
+  color: #fff;
+  margin-bottom: 0;
+  font-style: normal;
+}
+.containerFooter .wrapper footer .social {
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+}
+.containerFooter .wrapper footer .social .socialButton {
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.containerFooter .wrapper footer .social .socialButton i {
+  font-size: 30px;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+}
+.containerFooter .wrapper footer .social .socialButton:hover {
+  background-color: #000;
+  border: 1px solid #fff;
+  transition: 0.5s;
+}
+.containerFooter .wrapper footer .social .socialButton:hover i {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .containerFooter .wrapper footer {
+    padding: 25px 0px;
+  }
+  .containerFooter .wrapper footer .logo {
+    display: none;
+  }
+}
+.navigationBarModal {
+  display: none;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  padding: 45px 65px;
+  z-index: 15;
+}
+.navigationBarModal .navHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.navigationBarModal .navHead i {
+  cursor: pointer;
+  font-size: 40px;
+}
+.navigationBarModal nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.navigationBarModal nav a {
+  font-size: 30px;
+  color: #1a1a1a;
+  text-decoration: none;
+  text-underline-offset: 5px;
+}
+.navigationBarModal nav .activeLink {
+  text-decoration: underline;
+}
+
+.reviewsGreeting {
+  position: relative;
+  height: 511px;
+  margin-bottom: 75px;
+  overflow: hidden;
+}
+.reviewsGreeting::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../resource/font2.jpg);
+  background-size: cover;
+  filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.reviewsGreeting .wrapper {
+  position: relative;
+  z-index: 10;
+}
+.reviewsGreeting .wrapper .blockReview {
+  padding-top: 38px;
+}
+.reviewsGreeting .wrapper .blockReview h2 {
+  margin-bottom: 38px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+}
+.reviewsGreeting .wrapper .sliderReviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.reviewsGreeting .wrapper .sliderReviews img {
+  width: 75px;
+  height: 88px;
+  cursor: pointer;
+}
+.reviewsGreeting .wrapper .sliderReviews .boxReviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 53px;
+  width: 1003px;
+  height: 281px;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 10px;
+}
+.reviewsGreeting .wrapper .sliderReviews .boxReviews img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+}
+.reviewsGreeting .wrapper .sliderReviews .boxReviews .userInfo .headInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.reviewsGreeting .wrapper .sliderReviews .boxReviews .userInfo .headInfo h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.reviewsGreeting .wrapper .sliderReviews .boxReviews .userInfo .headInfo p {
+  font-size: 18px;
+  font-style: italic;
+  color: #a79e9e;
+}
+.reviewsGreeting .wrapper .sliderReviews .boxReviews .userInfo p {
+  font-size: 18px;
+  color: #444;
+  text-align: justify;
+}
+
+.reviewsForm {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.reviewsForm .wrapper h3 {
+  margin-bottom: 26px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+.reviewsForm .wrapper .blockForm {
+  display: flex;
+  gap: 68px;
+  padding: 36px 62px;
+  width: 1007px;
+  height: 400px;
+  background: #19ac74;
+  border: 3px solid #19ac74;
+  border-radius: 15px;
+  margin-bottom: 61px;
+}
+.reviewsForm .wrapper .blockForm .textForm h4 {
+  margin-bottom: 33px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f0f0f0;
+  text-align: justify;
+}
+.reviewsForm .wrapper .blockForm .textForm p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e3e3e3;
+  text-align: justify;
+}
+.reviewsForm .wrapper .blockForm .form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.reviewsForm .wrapper .blockForm .form .inputForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+.reviewsForm .wrapper .blockForm .form .inputForm input,
+.reviewsForm .wrapper .blockForm .form .inputForm textarea {
+  background: inherit;
+  color: #fff;
+}
+.reviewsForm .wrapper .blockForm .form .inputForm input {
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-bottom: 3px solid #fff;
+}
+.reviewsForm .wrapper .blockForm .form .inputForm textarea {
+  width: 527px;
+  height: 122px;
+  padding: 10px;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  margin-bottom: 46px;
+}
+.reviewsForm .wrapper .blockForm .form .inputForm input::-moz-placeholder, .reviewsForm .wrapper .blockForm .form .inputForm textarea::-moz-placeholder {
+  font-size: 18px;
+  color: #fff;
+  text-align: justify;
+}
+.reviewsForm .wrapper .blockForm .form .inputForm input::placeholder,
+.reviewsForm .wrapper .blockForm .form .inputForm textarea::placeholder {
+  font-size: 18px;
+  color: #fff;
+  text-align: justify;
+}
+.reviewsForm .wrapper .blockForm .form .btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.reviewsForm .wrapper .blockForm .form .btn button {
+  width: 212px;
+  height: 45px;
+  padding: 12px 30px;
+  background: inherit;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+}
+.reviewsForm .wrapper .blockForm .form .btn button:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .reviewsGreeting .wrapper .sliderReviews .slidArroy {
+    display: none;
+  }
+  .reviewsGreeting .wrapper .sliderReviews .boxReviews {
+    height: 300px;
+  }
+  .reviewsGreeting .wrapper .sliderReviews .boxReviews img {
+    width: 124px;
+    height: 124px;
+  }
+  .reviewsForm .wrapper .blockForm {
+    flex-direction: column;
+    gap: 30px;
+    width: 659px;
+    height: 514px;
+    padding: 36px 42px;
+  }
+  .reviewsForm .wrapper .blockForm .form {
+    width: 100%;
+  }
+  .reviewsForm .wrapper .blockForm .form .inputForm {
+    flex-direction: row;
+    gap: 27px;
+  }
+  .reviewsForm .wrapper .blockForm .form .inputForm input {
+    width: 270px;
+  }
+  .reviewsForm .wrapper .blockForm .form .inputForm textarea {
+    width: 567px;
+  }
+  .reviewsForm .wrapper .blockForm .form .inputForm .disableInput {
+    display: none;
+  }
+}
