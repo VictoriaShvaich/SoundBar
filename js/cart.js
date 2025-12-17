@@ -95,10 +95,10 @@ export function renderCart() {
 // --- Кнопка Заказать ---
 orderBtn.addEventListener('click', () => {
   if (!cart.length) {
-    alert('Корзина пуста!');
+    console.log('Корзина пуста!');
     return;
   }
-  alert('Заказ оформлен!');
+  console.log('Заказ оформлен!');
   cart = [];
   localStorage.setItem('cart', JSON.stringify(cart));
   renderCart();
